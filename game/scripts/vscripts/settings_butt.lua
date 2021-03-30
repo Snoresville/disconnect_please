@@ -5,7 +5,7 @@ BUTTINGS = {
 
 	GAME_MODE = "AP",                   -- "AR" "AP" All Random/ All Pick
 	ALLOW_SAME_HERO_SELECTION = 0,      -- 0 = everyone must pick a different hero, 1 = can pick same
-	HERO_BANNING = 1,                   -- 0 = no banning, 1 = banning phase
+	HERO_BANNING = 0,                   -- 0 = no banning, 1 = banning phase
 	USE_BOTS = 0, -- TODO
 	MAX_LEVEL = MAX_LEVEL,              -- (default = 30) the max level a hero can reach
 
@@ -47,6 +47,8 @@ BUTTINGS = {
 	BUYBACK_RULES = 0,                  -- 0 = normal, 1 = use buyback restrictions
 	BUYBACK_LIMIT = 1,                  -- Max amount of buybacks
 	BUYBACK_COOLDOWN = 600,             -- Cooldown for buyback
+
+	PLAYER_PER_TEAM_DISCONNECT = 1,
 }
 
 function BUTTINGS.ALTERNATIVE_XP_TABLE()	-- xp values if MAX_LEVEL is different than 30

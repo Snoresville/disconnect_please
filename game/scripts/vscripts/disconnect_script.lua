@@ -17,9 +17,18 @@ ListenToGameEvent("game_rules_state_game_in_progress", function()
     Timers:CreateTimer(0, function()
         EmitGlobalSound("bruh")
         
-        for team, players in pairs(disconnect_table) do
-            local playerID = players[math.random(#players)]
-            GameRules:SendCustomMessage("Goodbye "..PlayerResource:GetPlayerName(playerID), 0, 0)
+        local disconnect_table_clone = deepcopy(disconnect_table)
+        for i=1,math.min(BUTTINGS.PLAYER_PER_TEAM_DISCONNECT, 5) do
+            for team, players in pairs(disconnect_table_clone) do
+                local table_index = math.random(#players)
+                local playerID = players[table_index]
+                GameRules:SendCustomMessage("Goodbye "..PlayerResource:GetPlayerName(playerID), 0, 0)
+                SendToServerConsole("kickid " .. playerID+1)
+
+                table.remove(players, table_index)
+            end
         end
+
+        return 60
     end)
 end, nil)
