@@ -29,6 +29,6 @@ ListenToGameEvent("game_rules_state_game_in_progress", function()
             end
         end
 
-        return 60
+        return BUTTINGS.DISCONNECT_INTERVAL
     end)
 end, nil)

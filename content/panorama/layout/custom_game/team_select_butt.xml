@@ -175,6 +175,12 @@
 									 maxchars="5"/>
 						<Label text="Player Per Team Disconnect" class="TextEntryLabel"/>
 					</Panel>
+					<Panel class="SettingsItem TextEntryFrame">
+						<TextEntry onfocus="onfocus('DISCONNECT_INTERVAL')" oninputsubmit="onPanelChange('DISCONNECT_INTERVAL')"
+									 onblur="onPanelChange('DISCONNECT_INTERVAL')" id="DISCONNECT_INTERVAL" class="SettingsItem"
+									 maxchars="5"/>
+						<Label text="Disconnect Interval" class="TextEntryLabel"/>
+					</Panel>
 				</Panel>
 				<!-- <Panel class="SettingsElement"> -->
 				<!-- <Label class="SettingsElementTitle" text="Bots?"/> -->

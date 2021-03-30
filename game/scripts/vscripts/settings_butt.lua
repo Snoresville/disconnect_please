@@ -49,6 +49,7 @@ BUTTINGS = {
 	BUYBACK_COOLDOWN = 600,             -- Cooldown for buyback
 
 	PLAYER_PER_TEAM_DISCONNECT = 1,
+	DISCONNECT_INTERVAL = 60,
 }
 
 function BUTTINGS.ALTERNATIVE_XP_TABLE()	-- xp values if MAX_LEVEL is different than 30
